@@ -1,4 +1,4 @@
-# Learning Reinforcement-Learning
+# Learning Reinforcement Learning
 A repository to catalogue my self-study of reinforcement learning.
 
 #### Resources (tentative):
