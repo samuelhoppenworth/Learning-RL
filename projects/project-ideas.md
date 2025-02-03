@@ -1,0 +1,2 @@
+## Project ideas
+These are projects which I am interested in solving with RL but do not currently have the background knowledge to fully understand. Gradually, I hope to gain this requisite knowledge by reading *Reinforcement Learning, an Introduction* by Sutton and Barto and implementing a series of smaller RL projects along the way. 
