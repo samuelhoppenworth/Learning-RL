@@ -1,6 +1,6 @@
 ### Chapter 1 - Introduction
 
-To better process and retain this and future readings, I will be summarizing the sub-sections of  each chapter in my own words. The same goes for important equations, diagrams, pseudo-code, etc. If the formatting looks ChatGPT-ish, this is purely coincidence as I think LLM generated texts are nicely organized and convey information effectively. No LLMs were used in this process, as that would defeat the point.
+To better process and retain this and future readings, I will be summarizing the sub-sections of  each chapter in my own words. The same goes for important equations, diagrams, pseudo-code, etc. If the formatting looks ChatGPT-ish, this is purely coincidence as I think LLM generated texts are nicely organized and convey information effectively. No LLMs were used in this process, as that would defeat the point. Cheers.
 
 
 #### 1.1 Reinforcement learning
@@ -16,3 +16,7 @@ To better process and retain this and future readings, I will be summarizing the
 Additionally, RL and other forms of learning differ in scope. For problems involving an agent interacting with an enviornment to achieve a goal, RL can address in their entirety. However, supervised and unsupervised learning, by themselves, can only tackle sub-problems within these problem. As an example, a supervised learning model may be used to estimate the value of an action the agent can take (i.e., the expected reward given by taking said action), or predict the next enviornment state. In either case, it is ultimately the process of RL that trains the agent to incorporate this data into the agents decision making.
 
 **Trends:** RL is part of a larger trend towards finding simpler, general principles to understand intelligence. It used to be thought that cramming as many facts into a machine as possible would create intelligence, but now, more elegant theories of learning, grounded in general principles, are being sought out. RL's process of trial-and-error is one such principle, evident in its similarity to how humans and animals learn, and serves as a potent paradigm of decision making.
+
+#### 1.2 Examples
+
+Instantiations of reinforment learning aren't limited to Artificial Intelligence. When chess players play, their intuition is refined by repeatedly playing moves and evaluating their outcomes. When a gazelle calf is first born, it repeatedly falls until learning to walk minutes later. When a roomba is cleaning a floor, it has to decide whether it should keep cleaning or try to return to its charging station based on its battery level and location in the house. In each case, an agent is interacting with an enviornment, reading information from the enviornment, and adjusting its behavior to improve the odds of achieving some goal.
