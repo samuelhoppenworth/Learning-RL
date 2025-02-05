@@ -30,3 +30,5 @@ Instantiations of reinforment learning aren't limited to Artificial Intelligence
 **Value function:** if the reward signal specifies the desireability of an action in the short-term, then value functions specify the desireability of an action in the long term. Value functions inform the agent that what's "good" right now may not lead to good things later. It's like to explaining to a child that they can have two marshmallows instead of one, but only if they spit out the one in their mouth and wait a bit.
 
 **Enviornment models:** models which attempt to mimic the enviornment that agent is learning in. These are used to predict futures states given the current state and action. The predicted states are then used for planning what course of action should be taken.
+
+The rest of the chapter focuses on detailing the scope of the book, a brief history of RL, and an extended applying the concepts covered above.
