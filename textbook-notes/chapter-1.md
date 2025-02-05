@@ -1,9 +1,9 @@
-### Chapter 1 - Introduction
+## Notes on Chapter 1 - Introduction
 
-To better process and retain this and future readings, I will be summarizing the sub-sections of  each chapter in my own words. The same goes for important equations, diagrams, pseudo-code, etc. No LLMs were used in this process, as that would defeat the point. Cheers.
+To better process and retain this and future readings, I will be summarizing each sub-section into my own words. The same goes for important equations, diagrams, pseudo-code, etc. No LLMs were used in this process, as that would defeat the point. Cheers.
 
 
-#### 1.1 Reinforcement learning
+### 1.1 Reinforcement learning
 
 **Definition:** Reinforcement learning is the process of learning when to take an action in order to maximize a numerical reward given a particular scenario. For example, an agent learning how to swing a baseball bat needs to decide when to swing in order to maximize the likelyhood of hitting a baseball given its path. The agent is the swinger, the action is swinging the bat, the enviornment is a baseball field, and the scenario is the current pitch.
 
@@ -17,11 +17,11 @@ Additionally, RL and other forms of learning differ in scope. For problems invol
 
 **Trends:** RL is part of a larger trend towards finding simpler, general principles to understand intelligence. It used to be thought that cramming as many facts into a machine as possible would create intelligence, but now, more elegant theories of learning, grounded in general principles, are being sought out. RL's process of trial-and-error is one such principle, evident in its similarity to how humans and animals learn, and serves as a potent paradigm of decision making.
 
-#### 1.2 Examples
+### 1.2 Examples
 
 Instantiations of reinforment learning aren't limited to Artificial Intelligence. When chess players play, their intuition is refined by repeatedly playing moves and evaluating their outcomes. When a gazelle calf is first born, it repeatedly falls until learning to walk minutes later. When a roomba is cleaning a floor, it has to decide whether it should keep cleaning or try to return to its charging station based on its battery level and location in the house. In each case, an agent is interacting with an enviornment, reading information from the enviornment, and adjusting its behavior to improve the odds of achieving some goal.
 
-#### 1.3 Elements of Reinforcement Learning
+### 1.3 Elements of Reinforcement Learning
 
 **Policy:** the policy determines what action an agent takes given its perception of the current state of the enviornment.
 
@@ -29,4 +29,4 @@ Instantiations of reinforment learning aren't limited to Artificial Intelligence
 
 **Value function:** if the reward signal specifies the desireability of an action in the short-term, then value functions specify the desireability of an action in the long term. Value functions inform the agent that what's "good" right now may not lead to good things later. It's like to explaining to a child that they can have two marshmallows instead of one, but only if they spit out the one in their mouth and wait a bit.
 
-**Enviornnment models:** models which attempt to mimic the enviornment that agent is learning in. These are used to predict futures states given the current state and action. The predicted states are then used for planning what course of action should be taken.
+**Enviornment models:** models which attempt to mimic the enviornment that agent is learning in. These are used to predict futures states given the current state and action. The predicted states are then used for planning what course of action should be taken.
