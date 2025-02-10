@@ -1,4 +1,4 @@
-## Notes on Chapter 1 - Introduction
+## Chapter 1 - Introduction
 
 To better process and retain this and future readings, I will be summarizing each sub-section into my own words. The same goes for important equations, diagrams, pseudo-code, etc. No LLMs were used in this process, as that would defeat the point. Cheers.
 
