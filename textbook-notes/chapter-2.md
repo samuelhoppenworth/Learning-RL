@@ -20,6 +20,21 @@ The problem might be better understood by the anaology from which it derives its
 
 #### 2.3 The 10-armed Testbed
 
-Comparing the performance of different *epsilon values* shows each has its own advantages over the others. Consider the *epsilon* values of 0, 0.1, and 0.01. With an *epsilon* of 0 (a greedy action selection method), the agent does not explore and is therefore less likely to find the optimal policy. For an *epsilon* of 0.1, the agent explores and converges on the optimal policy quickly, but will never choose the greedy option more than 90% of the time. For *epsilon* of 0.01, the agent converges on the optimal policy slower than the agent with an *epsilon* of 0.1, but in the long run, will accumulate more reward than said agent due to choosing the greedy option 99% of the time.
+*Epsilon value camparison*: Comparing the performance of different *epsilon values* shows each has its own advantages over the others. Consider the *epsilon* values of 0, 0.1, and 0.01. With an *epsilon* of 0 (a greedy action selection method), the agent does not explore and is therefore less likely to find the optimal policy. For an *epsilon* of 0.1, the agent explores and converges on the optimal policy quickly, but will never choose the greedy option more than 90% of the time. For *epsilon* of 0.01, the agent converges on the optimal policy slower than the agent with an *epsilon* of 0.1, but in the long run, will accumulate more reward than said agent due to choosing the greedy option 99% of the time.
 
-In special cases where the reward variance of each action is 0, the greedy method only needs to try each action once to know its true value, which allows it to outperform *epsilon*-greedy methods that needlessly make sub-optimal exploratory actions. The inverse is true, where the actions with higher reward variance require more exploration to accurately estimate their true expected payout. In these cases, *epsilon*-greedy methods substantially outperform greedy methods.
+*Epsilon value use-cases*: In special cases where the reward variance of each action is 0, the greedy method only needs to try each action once to know its true value, which allows it to outperform *epsilon*-greedy methods that needlessly make sub-optimal exploratory actions. The inverse is true, where the actions with higher reward variance require more exploration to accurately estimate their true expected payout. In these cases, *epsilon*-greedy methods substantially outperform greedy methods.
+
+#### 2.4 Incremental Implementation
+
+*Naive sample-averaging*: One naive approach to implementing sample-averaging for a particular action by tracking all rewards received by taking said action and 
+taking the average. But the time and space complexcity of this approach is O(n), 
+where n is the number of times the action has been taken. 
+
+*Incremental implementation*: a better method is incrementally updating this value prediction using the following general formula:
+
+        NewEstimate = OldEstimate + StepSize[Target - OldEstimate]
+
+ *StepSize* is a parameter which influences how much the prediction changes.
+  *Target* is the actual reward received the last time this action was taken, so *[Target - OldEstimate]* can be thought of
+as the error between the prediction and real value of the reward the last time the agent took this action.
+So, the greater the error, the more *NewEstimate* moves in the direction of the *Target*, and vice versa.
