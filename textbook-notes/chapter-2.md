@@ -39,7 +39,7 @@ where n is the number of times the action has been taken.
 as the error between the prediction and real value of the reward the last time the agent took this action.
 So, the greater the error, the more *NewEstimate* moves in the direction of the *Target*, and vice versa.
 
-#### 2.5 Trackin a Nonstationary Problem
+#### 2.5 Tracking a Nonstationary Problem
 
 *Intuition:* It is often the case that the functions which describe the amount of reward a particular action illicits are nonstationary, i.e., the reward given for taking an action may change over time. It then makes sense to place more weight on recent rewards when predicting the value of a given action going forward.
 
