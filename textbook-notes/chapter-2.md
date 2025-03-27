@@ -6,11 +6,11 @@ A key distrinction between RL and other forms of learning is the use of evaluati
 
 #### 2.1 A *k*-armed Bandit Problem
 
-The *k*-armed Bandit Problem is a *nonassociative* learning problem, meaning their is only a single state the agent can interact with. In other words, the agent does not learn to associate states with actions when changing its policy. Instead, it has to learn by other means.
+The *k*-armed Bandit Problem is a *nonassociative* learning problem, meaning there is only a single state the agent can interact with. In other words, the agent does not learn to associate states with actions when changing its policy. Instead, it has to learn by other means.
 
-The problem itself involves choosing between *k* options, where each option has its own random distribution of rewards and the expected value of each distribution is unknown. The goal of the agent is to maximize its aggregate rewards by repeatedly choosing the option with the the highest expected reward.
+The problem itself involves choosing between *k* options, where each option has its own random distribution of rewards, and the expected value of each distribution is unknown. The goal of the agent is to maximize its aggregate reward by repeatedly choosing the option with the the highest expected value.
 
-The problem might be better understood by the anaology from which it derives its name. "One-armed bandits" are another name for slot-machines, so a *k*-armed bandit is a slow machine with *k* levers, each with its own variable payout. The objective, then, is to predict the odds of each lever and repeatedly pull the one you think yields the most profit (or, more likely in this case, yields the least loss).
+The problem might be better understood by the anaology from which it derives its name. "One-armed bandits" are another name for slot-machines, so a *k*-armed bandit is a slot machine with *k* levers, each with its own variable payout. The objective, then, is to predict the odds of each lever and repeatedly pull the one you think yields the most profit (or, more realistically, the least loss).
 
 #### 2.2 Action-value Methods
 
@@ -43,12 +43,13 @@ So, the greater the error, the more *NewEstimate* moves in the direction of the 
 
 *Intuition:* It is often the case that the functions which describe the amount of reward a particular action illicits are nonstationary, i.e., the reward given for taking an action may change over time. It then makes sense to place more weight on recent rewards when predicting the value of a given action going forward.
 
-*Exponential recency-weighted average*: This running average estimates the reward of a given function after it has been selected *n* times, but exponentially diminishes the weights placed on early rewards recevied as *n* increases. Let $Q_n$ denote the estimated reward of an action after *n* selections, let $R_$n be the actual reward received on the *n*th selection of an action, and let $\alpha$ be a constant stepsize between 0 and 1. 
+*Exponential recency-weighted average*: This running average estimates the reward of a given function after it has been selected *n* times, but exponentially diminishes the weights placed on early rewards recevied as *n* increases. Let $Q_n$ denote the estimated reward of an action after *n* selections, let $R_n$ be the actual reward received on the *n*th selection of an action, and let $\alpha$ be a constant stepsize between 0 and 1. 
 
 $$
 Q_{n + 1} = (1 - \alpha)^n Q_1 + \sum_{i = 1}^n \alpha(1 - \alpha)^{n - i} R_i
 $$
 
 Because $\alpha$ is always less than 1, the $\alpha(1 - \alpha)^{n - i}$ term effectively diminishes the weight that $R_i$ has on the average at an exponential rate, thus placing more weight on recent values of $R_i$, which may better predict $R_{n + 1}$.
+
 
 
