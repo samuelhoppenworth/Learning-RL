@@ -52,4 +52,13 @@ $$
 Because $\alpha$ is always less than 1, the $\alpha(1 - \alpha)^{n - i}$ term effectively diminishes the weight that $R_i$ has on the average at an exponential rate, thus placing more weight on recent values of $R_i$, which may better predict $R_{n + 1}$.
 
 
+#### 2.6 Optimistic Intial Values
+
+One way of encouraging exploration in stationary problems is by setting *Optimistic Initial Values*. Aptly named, the Optimistic Intial Values method sets the inital action values to be higher than they could possibly be (hence "Optimistic"). In doing so, the learner will select one of these actions at time step zero, receive a reward much lower than it expects (it has unrealistic initial expectations), thus lowering its expectation of reward for that action going forward and encouraging the learner to explore other options. As a result, greedy actions effectively turn into exploratory actions at the beginning of training, allowing the model to converge faster than if the initial values were set non-optimistically.
+
+It should be noted that this trick does not apply to non-stationary problems. The Optimistic Initial Values method only bolsters exploration at the start of training. But non-stationary problems are defined by action values that change throughout training, which renew the need for exploration everytime they change. So while the optimistic Inital Values method would encourage exploration at the start of training non-stationary problems, it does nothing to excourage exploration outside of this very limited time-frame, effectively diminishing its positive effects on convergence time once the action values change.
+
+#### 2.7 Upper-Confidence-Bound Action Selection
+
+
 
